@@ -1,5 +1,73 @@
+/* THEME */
+$primary: hsl(185, 100%, 50%);
+
+$body-bg: darken($primary, 50%);
+$body-color: #efefef;
+$font-size-base: 20;
+
+$secondary: hsl(160, 100%, 50%);
+
+/* IMPORTING FONT */
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
+
+/* IMPORTING BOOTSTRAP */
 @import "../vendor/twbs/bootstrap/scss/bootstrap.scss";
 
 body {
-    background-color: cyan;
+    font-family: "Titillium Web";
+}
+
+#menu-top-bar {
+    .dropdown-toggle::after {
+        margin-left: 0.5em;
+    }
+    .menu-item:not(:last-child) {
+        margin-right: 2rem;
+    }
+}
+
+/* CONTAINER WIDTH LIMIT */
+.container {
+    max-width: 850px;
+}
+
+/* TITLE */
+.component-title {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    background: url(../images/wobble-2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    h1 {
+        color: lighten($secondary, 20%);
+    }
+}
+
+/* PAGE */
+.page {
+    h2,
+    h3,
+    h4,
+    h5 {
+        float: left;
+        margin: 0 20px 0 0;
+        line-height: 60px;
+    }
+}
+
+.my-border {
+    height: 2px;
+    width: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(90deg, #00d9ff 20%, #00ffea);
+}
+
+/* OPACITY */
+.opacity-08 {
+    opacity: 0.8;
+}
+.opacity-05 {
+    opacity: 0.5;
 }
