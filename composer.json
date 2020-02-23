@@ -1,0 +1,6 @@
+{
+    "require": {
+        "wp-bootstrap/wp-bootstrap-navwalker": "4.3.*",
+        "twbs/bootstrap": "4.4.1"
+    }
+}
