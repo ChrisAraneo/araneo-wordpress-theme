@@ -5,4 +5,7 @@
     <?php get_template_part('includes/section', 'content'); ?>
 </div>
 
+<aside>FRONTPAGE</aside>
+<?php the_author_posts_link(); ?>
+
 <?php get_footer(); ?>
