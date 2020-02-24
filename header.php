@@ -7,8 +7,8 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark" role="navigation">
-    <div class="container">
+    <nav class="navbar navbar-expand-md navbar-dark position-fixed fixed-top bg-dark" role="navigation">
+    <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#top-menu-container" aria-controls="top-menu-container" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

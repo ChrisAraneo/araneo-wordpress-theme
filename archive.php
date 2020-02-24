@@ -1,9 +1,8 @@
 <?php get_header(); ?>
 
-<div class="container">
+<div class="container page">
+    <?php get_template_part('includes/component', 'title'); ?>
     <?php get_template_part('includes/section', 'archive'); ?>
 </div>
-
-<aside>ARCHIVE</aside>
 
 <?php get_footer(); ?>

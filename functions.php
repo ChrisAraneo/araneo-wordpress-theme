@@ -16,6 +16,14 @@
 
         wp_register_script('bootstrapjs', get_template_directory_uri() . '/vendor/twbs/bootstrap/dist/js/bootstrap.min.js', 'jquery', false, true);
         wp_enqueue_script('bootstrapjs');
+        
+        /* TYPEWRITER */
+        wp_register_script('typewriter', get_template_directory_uri() . '/scripts/typewriter.js', 'jquery', false, true);
+        wp_enqueue_script('typewriter');
+
+        /* ANIMATED SPIDER */
+        wp_register_script('spider', get_template_directory_uri() . '/scripts/spider.js', 'jquery', false, true);
+        wp_enqueue_script('spider');        
     }
     add_action('wp_enqueue_scripts', 'load_js');
 
