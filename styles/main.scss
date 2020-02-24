@@ -2,8 +2,13 @@
 $primary: hsl(185, 100%, 50%);
 
 $body-bg: darken($primary, 50%);
+$dark: $body-bg;
+
 $body-color: #efefef;
-$font-size-base: 20;
+$font-size-base: 1.3rem;
+
+$tag-color: rgba(255, 255, 255, 0.8);
+$tag-hover-color: rgba(255, 255, 255, 1);
 
 $secondary: hsl(160, 100%, 50%);
 
@@ -15,8 +20,44 @@ $secondary: hsl(160, 100%, 50%);
 
 body {
     font-family: "Titillium Web";
+    line-height: 2rem;
+    min-height: 100vh;
 }
 
+/* CONTAINER WIDTH LIMIT */
+.container {
+    max-width: 850px;
+}
+
+/* START */
+.component-start {
+    position: absolute;
+    min-height: 100vh;
+    width: 100%;
+    background: url(../images/wobble-2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page {
+    margin-top: 4.5rem;
+}
+
+.component-post:not(:last-of-type) {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+}
+
+/* STYLING DROPDOWN */
+.navbar-nav ul.dropdown-menu.show {
+    box-sizing: border-box;
+    border: 1px solid lighten($body-bg, 25%);
+    background-color: lighten($body-bg, 3%);
+}
 #menu-top-bar {
     .dropdown-toggle::after {
         margin-left: 0.5em;
@@ -24,12 +65,46 @@ body {
     .menu-item:not(:last-child) {
         margin-right: 2rem;
     }
+    .dropdown-menu .menu-item {
+        margin-right: 0 !important;
+    }
 }
 
-/* CONTAINER WIDTH LIMIT */
-.container {
-    max-width: 850px;
+.dropdown-item {
+    color: $primary;
 }
+
+// .animated-transform-in-0 {
+//     animation-name: animated-transform-in;
+//     animation-duration: 1s;
+//     animation-delay: 1s;
+//     animation-fill-mode: forwards;
+// }
+
+// @keyframes animated-transform-in {
+//     from {
+//         opacity: 0;
+//     }
+//     to {
+//         opacity: 1;
+//     }
+// }
+
+// .animated-transform-out-0 {
+//     animation-name: animated-transform-out;
+//     animation-duration: 1s;
+//     animation-delay: 0s;
+//     animation-fill-mode: backwards;
+// }
+
+// @keyframes animated-transform-out {
+//     from {
+//         opacity: 1;
+//     }
+//     to {
+//         opacity: 0;
+//     }
+// }
 
 /* TITLE */
 .component-title {
@@ -38,21 +113,60 @@ body {
     background: url(../images/wobble-2.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
 
-    h1 {
-        color: lighten($secondary, 20%);
+/* HEADERS SECONDARY COLORS */
+h1 {
+    color: lighten($secondary, 15%);
+}
+h2,
+h3 {
+    color: lighten($secondary, 20%);
+}
+
+/* FLOAT LEFT HEADERS */
+@media (max-width: 768px) {
+    h2.left,
+    h3.left,
+    h4.left,
+    h5.left,
+    h2.right,
+    h3.right,
+    h4.right,
+    h5.right {
+        display: block;
+        text-align: center;
+        margin-right: 0;
+        line-height: 4rem;
+    }
+}
+@media (min-width: 769px) {
+    h2.left,
+    h3.left,
+    h4.left,
+    h5.left {
+        float: left;
+        margin: 0 20px 0 0;
+        line-height: 4rem;
+    }
+    h2.right,
+    h3.right,
+    h4.right,
+    h5.right {
+        float: right;
+        margin: 0 0 0 20px;
+        line-height: 4rem;
     }
 }
 
-/* PAGE */
-.page {
+/* HEADERS CENTERED IN MOBILE */
+@media (max-width: 768px) {
+    h1,
     h2,
     h3,
     h4,
     h5 {
-        float: left;
-        margin: 0 20px 0 0;
-        line-height: 60px;
+        text-align: center;
     }
 }
 
@@ -70,4 +184,22 @@ body {
 }
 .opacity-05 {
     opacity: 0.5;
+}
+
+/* TAGS */
+a[href*="tag"] {
+    color: $tag-color;
+    box-sizing: border-box;
+    border: 1px solid $tag-color;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border-radius: 0.33em;
+    font-size: 1.05rem;
+}
+a[href*="tag"]:hover {
+    color: $tag-hover-color;
+    border: 1px solid $tag-hover-color;
+}
+a[href*="tag"]:not(:last-of-type) {
+    margin-right: 0.1em;
 }
