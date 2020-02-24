@@ -7,6 +7,7 @@
 
 <?php the_content(); ?>
 
+<footer>
 <?php
     $tags = get_the_tags();
     if(!empty($tags)):
@@ -17,3 +18,4 @@
         <?php endforeach;?>
     <?php endif;?>
 <?php endwhile; else: endif; ?>
+</footer>
