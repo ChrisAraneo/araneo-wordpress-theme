@@ -1,13 +1,15 @@
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
 
-<p class="text-center mb-4">
+<p class="text-center mb-5">
     <span class="mr-3"><?php the_author_posts_link(); ?></span>
     <span><?php echo get_the_date('d/m/Y'); ?></span>
 </p>
 
-<?php the_content(); ?>
+<article>
+    <?php the_content(); ?>
+</article>
 
-<footer>
+<footer class="mt-5">
 <?php
     $tags = get_the_tags();
     if(!empty($tags)):
