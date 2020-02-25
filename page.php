@@ -1,8 +1,9 @@
 <?php get_header(); ?>
 
-<div class="container page">
+<div class="container page opacity-animation">
     <?php get_template_part('includes/component', 'title'); ?>
     <?php get_template_part('includes/section', 'content'); ?>
 </div>
 
+<?php get_template_part('includes/component', 'footer'); ?>
 <?php get_footer(); ?>

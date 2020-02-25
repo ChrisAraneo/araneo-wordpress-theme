@@ -17,6 +17,10 @@
         wp_register_script('bootstrapjs', get_template_directory_uri() . '/vendor/twbs/bootstrap/dist/js/bootstrap.min.js', 'jquery', false, true);
         wp_enqueue_script('bootstrapjs');
         
+        /* TAGS */
+        wp_register_script('tags', get_template_directory_uri() . '/scripts/tags.js', 'jquery', false, true);
+        wp_enqueue_script('tags');
+
         /* TYPEWRITER */
         wp_register_script('typewriter', get_template_directory_uri() . '/scripts/typewriter.js', 'jquery', false, true);
         wp_enqueue_script('typewriter');
@@ -52,4 +56,9 @@
             'top-menu' => 'Top Menu Location'
         )
     );
+
+    // ADDING FILTER TO ARCHIVE TITLE
+    add_filter('get_the_archive_title', function ($title) {
+        return preg_replace('/^\w+: /', '', $title);
+    });
 ?>

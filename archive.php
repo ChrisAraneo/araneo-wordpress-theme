@@ -5,4 +5,5 @@
     <?php get_template_part('includes/section', 'archive'); ?>
 </div>
 
+<?php get_template_part('includes/component', 'footer'); ?>
 <?php get_footer(); ?>

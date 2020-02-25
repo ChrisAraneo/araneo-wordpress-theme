@@ -1,1 +1,3 @@
-<aside>SEARCH</aside>
+<?php
+    // Search not yet implemented
+?>

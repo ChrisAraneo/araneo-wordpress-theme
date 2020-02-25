@@ -1,6 +1,6 @@
-<div class="component-start background-lines-full-outer">
-    <div class="component-start-inner background-lines-full">
-        <div>
+<div class="section-start background-lines-full-outer opacity-animation">
+    <div class="section-start-inner background-lines-full">
+        <div class="p-2">
             <header class="mb-5">
                 <h1 class="display-4 text-center font-weight-bold">
                     <span class="text-white typewriter" data-delay="5">Cześć, jestem</span> Krzysiek
@@ -10,12 +10,12 @@
                 </h4>
                 <div class="mt-5" style="perspective: 50px; display: flex; flex-direction: row; justify-content: center;">
                     <div id="spider">
-                        <pre style="display: inline-block; color: white; text-align: center; font-size: 1.8rem; line-height: 2rem; font-weight: bold; position: relative; transition-duration: 0.1s; user-select: none;">//  \\<br>_\\()//_<br>/ //  \\ \<br>| \__/ |<br></pre>
+                        <pre class="mb-0" style="display: inline-block; color: white; text-align: center; font-size: 1.8rem; line-height: 2rem; font-weight: bold; position: relative; transition-duration: 0.1s; user-select: none;">//  \\<br>_\\()//_<br>/ //  \\ \<br>| \__/ |<br></pre>
                     </div>
                 </div>
             </header>
             <section class="d-flex flex-row justify-content-center mb-2">
-                <a type="button" class="btn btn-primary" href="?cat=8">Zobacz moje portfolio</a>
+                <a type="button" class="btn btn-primary" href="https://chrisaraneo.com/category/portfolio">Zobacz moje portfolio</a> 
             <section>
         </div>
     </div>
