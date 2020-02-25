@@ -23,7 +23,13 @@
 
         /* ANIMATED SPIDER */
         wp_register_script('spider', get_template_directory_uri() . '/scripts/spider.js', 'jquery', false, true);
-        wp_enqueue_script('spider');        
+        wp_enqueue_script('spider');     
+        
+        /* BACKGROUND */
+        wp_register_script('background', get_template_directory_uri() . '/scripts/background.js', 'jquery', false, true);
+        wp_enqueue_script('background');
+        $data = array( 'path' => get_template_directory_uri() );
+        wp_localize_script( 'background', 'data', $data ); 
     }
     add_action('wp_enqueue_scripts', 'load_js');
 

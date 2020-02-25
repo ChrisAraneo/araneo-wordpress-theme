@@ -1,7 +1,13 @@
-/* THEME */
-$primary: hsl(185, 100%, 50%);
+* {
+    padding: 0;
+    margin: 0;
+}
 
-$body-bg: darken($primary, 50%);
+/* THEME */
+$primary: hsl(185, 100%, 60%);
+$secondary: hsl(160, 100%, 60%);
+
+$body-bg: darken($primary, 55%);
 $dark: $body-bg;
 
 $body-color: #efefef;
@@ -9,8 +15,6 @@ $font-size-base: 1.3rem;
 
 $tag-color: rgba(255, 255, 255, 0.8);
 $tag-hover-color: rgba(255, 255, 255, 1);
-
-$secondary: hsl(160, 100%, 50%);
 
 /* IMPORTING FONT */
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
@@ -29,14 +33,24 @@ body {
     max-width: 850px;
 }
 
+/* GRADIENT BACKGROUND */
+.background-gradient {
+    background: linear-gradient(-12deg, darken($primary, 28%), darken($primary, 40%), $body-bg, $body-bg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
 /* START */
 .component-start {
     position: absolute;
-    min-height: 100vh;
+    top: 0;
+    left: 0;
     width: 100%;
-    background: url(../images/wobble-2.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+}
+.component-start-inner {
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,10 +69,10 @@ body {
 /* STYLING DROPDOWN */
 .navbar-nav ul.dropdown-menu.show {
     box-sizing: border-box;
-    border: 1px solid lighten($body-bg, 25%);
+    border: 1px solid lighten($body-bg, 20%);
     background-color: lighten($body-bg, 3%);
 }
-#menu-top-bar {
+.navbar {
     .dropdown-toggle::after {
         margin-left: 0.5em;
     }
@@ -74,54 +88,17 @@ body {
     color: $primary;
 }
 
-// .animated-transform-in-0 {
-//     animation-name: animated-transform-in;
-//     animation-duration: 1s;
-//     animation-delay: 1s;
-//     animation-fill-mode: forwards;
-// }
-
-// @keyframes animated-transform-in {
-//     from {
-//         opacity: 0;
-//     }
-//     to {
-//         opacity: 1;
-//     }
-// }
-
-// .animated-transform-out-0 {
-//     animation-name: animated-transform-out;
-//     animation-duration: 1s;
-//     animation-delay: 0s;
-//     animation-fill-mode: backwards;
-// }
-
-// @keyframes animated-transform-out {
-//     from {
-//         opacity: 1;
-//     }
-//     to {
-//         opacity: 0;
-//     }
-// }
-
+/* HEADERS SECONDARY COLORS */
+h1,
+h2,
+h3,
+h4 {
+    color: $secondary;
+}
 /* TITLE */
 .component-title {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    background: url(../images/wobble-2.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
-/* HEADERS SECONDARY COLORS */
-h1 {
-    color: lighten($secondary, 15%);
-}
-h2,
-h3 {
-    color: lighten($secondary, 20%);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 /* FLOAT LEFT HEADERS */
