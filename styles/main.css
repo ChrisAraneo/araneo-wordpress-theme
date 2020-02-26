@@ -11010,4 +11010,55 @@ a[href*="tag"]:not(:last-of-type) {
     opacity: 1;
   }
 }
+
+.scale-animation {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+
+@-webkit-keyframes example {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+
+@keyframes example {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+
+/* CUSTOM SCROLL BAR */
+body::-webkit-scrollbar {
+  width: 0.9rem;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #002326;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #7c7c7c;
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #969696;
+}
 /*# sourceMappingURL=main.css.map */

@@ -2,6 +2,11 @@
 
 My theme for my personal website
 
-## Project installation:
+## Project Installation
 
 composer install
+npm install
+
+## Project Build
+
+(TO DO)

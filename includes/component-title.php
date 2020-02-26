@@ -10,7 +10,7 @@
     <header class="component-title-outer mb-5 mt-5 background-lines-3-outer">
         <div class="component-title background-lines-3">
             <h1 class="display-4 text-center font-weight-bold">
-                <span class="text-white">Tag: </span><?php echo get_the_archive_title(); ?>
+                <span class="text-white">Tag </span><?php echo get_the_archive_title(); ?>
             </h1>
         </div>
     </header>

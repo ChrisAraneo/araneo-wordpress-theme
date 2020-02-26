@@ -17,7 +17,7 @@ function setBackground(base64, className) {
     if (elements) {
         for (let i = 0; i < elements.length; ++i) {
             const element = elements[i];
-            element.setAttribute("style", `background-image: url("${base64}");background-repeat: no-repeat;background-size: cover;background-position: left bottom;`);
+            element.setAttribute("style", `background-image: url("${base64}");background-repeat: no-repeat;background-size: 100% 100%;background-position: left bottom;`);
         }
     }
     const befores = document.getElementsByClassName(`${className}-outer`);
