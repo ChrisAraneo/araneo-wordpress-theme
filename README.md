@@ -1,16 +1,22 @@
-# Personal Website Theme
+# Araneo Wordpress Theme
 
-Wordpress theme for my personal website
+Wordpress theme for my personal website.
+
 
 ## Project Installation
 
-You need to have composer, npm (and Node.js), gulp-cli
+In order to install all project files & dependencies you will need _composer_, _npm_, _gulp-cli_.
+If you have everything needed run commands below:
 
+```
 composer install
 npm install
+```
 
-## Project Build
+## Theme Build
 
-npm build
+```
+gulp build
+```
 
-After building procedure the ready-to-use theme is located in dist directory.
+After building procedure the ready-to-use theme is located in _dist_ directory.

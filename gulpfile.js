@@ -4,31 +4,46 @@ const zip = require('gulp-zip');
 
 const themeName = "araneo-theme";
 
-function clearAll() {
+// =====
+
+gulp.task('clean', function () {
     return del(['dist/*']);
-}
+});
 
-function copyAll() {
-    const copy = async (from, to) => {
-        return gulp.src(from)
-            .pipe(gulp.dest(to));
-    }
+gulp.task('clean-!zip', function () {
+    return del(['dist/*', `!dist/*.zip`]);
+});
 
-    return gulp.series(
-        () => copy('src/*', 'dist/'),
-        () => copy('vendor/twbs/bootstrap/dist/js/bootstrap.min.js', 'dist/libs/'),
-        () => copy('vendor/wp-bootstrap/wp-bootstrap-navwalker/class-wp-bootstrap-navwalker.php', 'dist/libs/')
-    );
-}
+gulp.task('clean-styles', function () {
+    return del(['dist/styles/*.map', 'dist/styles/*.scss']);
+});
 
-function archive(from, name, to) {
-    return gulp.src(from)
-        .pipe(zip(name))
-        .pipe(gulp.dest(to))
-}
+gulp.task('copy-src', function () {
+    return gulp.src('src/**')
+        .pipe(gulp.dest('dist/'));
+});
 
-function clear() {
-    return del(['dist/*', `!dist/${themeName}.zip`]);
-}
+gulp.task('copy-bootstrap', function () {
+    return gulp.src('vendor/twbs/bootstrap/dist/js/bootstrap.min.js')
+        .pipe(gulp.dest('dist/libs/'));
+});
 
-exports.build = gulp.series(clearAll, copyAll, archive, clear);
+gulp.task('copy-navwalker', function () {
+    return gulp.src('vendor/wp-bootstrap/wp-bootstrap-navwalker/class-wp-bootstrap-navwalker.php')
+        .pipe(gulp.dest('dist/libs/'));
+});
+
+gulp.task('archive', function () {
+    return gulp.src('dist/**')
+        .pipe(zip(`${themeName}.zip`))
+        .pipe(gulp.dest('dist/'))
+});
+
+gulp.task('success', function () {
+    console.log("Success!");
+    return null;
+})
+
+// =====
+
+gulp.task('build', gulp.series('clean', gulp.parallel('copy-src', 'copy-bootstrap', 'copy-navwalker'), 'clean-styles', 'archive', 'clean-!zip'));
