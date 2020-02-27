@@ -1,6 +1,6 @@
-# Personal Website (WordPress) Theme
+# Personal Website Theme
 
-My theme for my personal website
+Wordpress theme for my personal website
 
 ## Project Installation
 
