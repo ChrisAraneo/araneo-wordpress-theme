@@ -4,14 +4,14 @@
   "description": "Theme for my personal website",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChrisAraneo/personal-website-theme.git"
+    "url": "git+https://github.com/ChrisAraneo/araneo-wordpress-theme.git"
   },
   "author": "Krzysztof 'Chris Araneo' Pająk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ChrisAraneo/personal-website-theme/issues"
+    "url": "https://github.com/ChrisAraneo/araneo-wordpress-theme/issues"
   },
-  "homepage": "https://github.com/ChrisAraneo/personal-website-theme#readme",
+  "homepage": "https://github.com/ChrisAraneo/araneo-wordpress-theme#readme",
   "devDependencies": {
     "del": "^5.1.0",
     "gulp": "^4.0.2",
