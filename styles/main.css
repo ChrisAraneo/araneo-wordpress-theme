@@ -10964,6 +10964,10 @@ h4 {
   opacity: 0.5;
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
 /* TAGS */
 a[href*="tag"] {
   color: rgba(255, 255, 255, 0.8);
@@ -10985,60 +10989,6 @@ a[href*="tag"]:not(:last-of-type) {
   margin-right: 0.1em;
 }
 
-/* ANIMATIONS */
-.opacity-animation {
-  -webkit-animation-name: opacity-animation;
-          animation-name: opacity-animation;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
-@-webkit-keyframes opacity-animation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes opacity-animation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.scale-animation {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  -webkit-animation-name: example;
-          animation-name: example;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-}
-
-@-webkit-keyframes example {
-  from {
-    background-color: red;
-  }
-  to {
-    background-color: yellow;
-  }
-}
-
-@keyframes example {
-  from {
-    background-color: red;
-  }
-  to {
-    background-color: yellow;
-  }
-}
-
 /* CUSTOM SCROLL BAR */
 body::-webkit-scrollbar {
   width: 0.9rem;
@@ -11046,19 +10996,84 @@ body::-webkit-scrollbar {
 
 /* Track */
 body::-webkit-scrollbar-track {
-  background: #002326;
+  background: #002629;
 }
 
 /* Handle */
 body::-webkit-scrollbar-thumb {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #7c7c7c;
-  border-radius: 2px;
+  background: #afafaf;
 }
 
 /* Handle on hover */
 body::-webkit-scrollbar-thumb:hover {
-  background: #969696;
+  background: #d6d6d6;
+}
+
+/* ANIMATIONS */
+.animation-opacity {
+  -webkit-animation-name: animation-opacity;
+          animation-name: animation-opacity;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes animation-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animation-scale {
+  -webkit-animation-name: animation-scale;
+          animation-name: animation-scale;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes animation-scale {
+  from {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes animation-scale {
+  from {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* SCROLL SCRIPT */
+.scroll-script {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.scroll-script.visible {
+  opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */

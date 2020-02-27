@@ -197,6 +197,9 @@ h4 {
 .opacity-05 {
     opacity: 0.5;
 }
+.opacity-0 {
+    opacity: 0;
+}
 
 /* TAGS */
 a[href*="tag"] {
@@ -216,36 +219,6 @@ a[href*="tag"]:not(:last-of-type) {
     margin-right: 0.1em;
 }
 
-/* ANIMATIONS */
-.opacity-animation {
-    animation-name: opacity-animation;
-    animation-duration: 1s;
-}
-@keyframes opacity-animation {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-.scale-animation {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    animation-name: example;
-    animation-duration: 4s;
-}
-
-@keyframes example {
-    from {
-        background-color: red;
-    }
-    to {
-        background-color: yellow;
-    }
-}
-
 /* CUSTOM SCROLL BAR */
 body::-webkit-scrollbar {
     width: 0.9rem;
@@ -253,17 +226,51 @@ body::-webkit-scrollbar {
 
 /* Track */
 body::-webkit-scrollbar-track {
-    background: lighten($body-bg, 4.5%);
+    background: lighten($body-bg, 5%);
 }
 
 /* Handle */
 body::-webkit-scrollbar-thumb {
     box-sizing: border-box;
-    background: darken($body-color, 45%);
-    border-radius: 2px;
+    background: darken($body-color, 25%);
 }
 
 /* Handle on hover */
 body::-webkit-scrollbar-thumb:hover {
-    background: darken($body-color, 35%);
+    background: darken($body-color, 10%);
+}
+
+/* ANIMATIONS */
+.animation-opacity {
+    animation-name: animation-opacity;
+    animation-duration: 1.5s;
+}
+@keyframes animation-opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.animation-scale {
+    animation-name: animation-scale;
+    animation-duration: 1s;
+}
+@keyframes animation-scale {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* SCROLL SCRIPT */
+.scroll-script {
+    opacity: 0;
+    transition-property: opacity;
+}
+.scroll-script.visible {
+    opacity: 1;
 }

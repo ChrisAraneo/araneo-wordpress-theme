@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container page opacity-animation">
+<div class="container page animation-opacity">
     <header class="mb-5 mt-5 background-lines-3-outer">
         <div class="component-title background-lines-3">
             <h1 class="display-5 text-center font-weight-bold">

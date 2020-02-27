@@ -33,7 +33,11 @@
         wp_register_script('background', get_template_directory_uri() . '/scripts/background.js', 'jquery', false, true);
         wp_enqueue_script('background');
         $data = array( 'path' => get_template_directory_uri() );
-        wp_localize_script( 'background', 'data', $data ); 
+        wp_localize_script( 'background', 'data', $data );
+
+        /* SCROLL SCRIPT */
+        wp_register_script('scroll', get_template_directory_uri() . '/scripts/scroll-script.js', 'jquery', false, true);
+        wp_enqueue_script('scroll');
     }
     add_action('wp_enqueue_scripts', 'load_js');
 
