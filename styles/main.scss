@@ -69,6 +69,22 @@ body {
         justify-content: center;
     }
 }
+@media (max-width: 600px) {
+    #start-title {
+        min-height: 8.375rem;
+    }
+    #start-subtitle {
+        min-height: 4.625rem;
+    }
+}
+@media (min-width: 601px) {
+    #start-title {
+        min-height: 0;
+    }
+    #start-subtitle {
+        min-height: 0;
+    }
+}
 
 .page {
     margin-top: 4.5rem;
@@ -243,7 +259,7 @@ body::-webkit-scrollbar-thumb:hover {
 /* ANIMATIONS */
 .animation-opacity {
     animation-name: animation-opacity;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
 }
 @keyframes animation-opacity {
     from {

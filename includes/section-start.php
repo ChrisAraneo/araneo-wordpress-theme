@@ -2,11 +2,11 @@
     <div class="section-start-inner background-lines-full">
         <div class="p-2">
             <header class="mb-5">
-                <h1 class="display-4 text-center font-weight-bold">
+                <h1 id="start-title" class="display-4 text-center font-weight-bold">
                     <span class="text-white typewriter" data-delay="8">Cześć, jestem</span> Krzysiek
                 </h1>
-                <h4 class="text-center font-weight-bold">
-                    <span class="text-white typewriter" data-delay="18">Poszukuję stażu na stanowisku</span> <span class="text-secondary typewriter" data-delay="50">programisty</span>
+                <h4 id="start-subtitle" class="text-center font-weight-bold">
+                    <span class="text-white typewriter" data-delay="21">Poszukuję stażu na stanowisku</span> <span class="text-secondary typewriter" data-delay="50">programisty</span>
                 </h4>
                 <div class="mt-5" style="perspective: 50px; display: flex; flex-direction: row; justify-content: center;" data-aos="zoom-in" data-aos-delay="300">
                     <div id="spider">

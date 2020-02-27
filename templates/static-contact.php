@@ -8,17 +8,19 @@ Template Name: Contact (static) (pl)
 
 <div class="container page animation-opacity">
     <?php get_template_part('includes/component', 'title'); ?>
-
-    <div>
-
+    <div class="d-flex flex-row justify-content-center">
+        <div class="d-inline-block mr-4">
+            <p class="text-right">E-mail:</p>
+            <p class="text-right">Git:</p>
+        </div>
+        <div class="d-inline-block">
+            <p><a href="<?php echo base64_encode("mailto:chris.araneo@gmail.com"); ?>" data-encoded target="_blank"><?php echo base64_encode("chris.araneo@gmail.com"); ?></a></p>
+            <p><a href="<?php echo base64_encode("https://github.com/chrisaraneo"); ?>" data-encoded target="_blank"><?php echo base64_encode("github.com/ChrisAraneo"); ?></a></p>
+        </div>
     </div>
-    <div>
-        <a href="<?php echo base64_encode("mailto:chris.araneo@gmail.com"); ?>" data-encoded target="_blank"><?php echo base64_encode("chris.araneo@gmail.com"); ?></a>
-        <a href="<?php echo base64_encode("https://github.com/chrisaraneo"); ?>" data-encoded target="_blank"><?php echo base64_encode("github.com/ChrisAraneo"); ?></a>
-    </div>
-    <h2 class="left">Tutaj będzie kontakt</h2>
-    
 </div>
+
+<?php get_template_part('includes/component', 'footer'); ?>
 
 <script>
     function decode() {
@@ -35,8 +37,9 @@ Template Name: Contact (static) (pl)
         } 
     }
     document.addEventListener('DOMContentLoaded', function () {
-        decode();
+        setTimeout(() => decode(), 0);
     }, false);
 </script>
-<?php get_template_part('includes/component', 'footer'); ?>
+
+
 <?php get_footer(); ?>
