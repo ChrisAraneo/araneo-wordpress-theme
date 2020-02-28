@@ -19,7 +19,7 @@ gulp.task('clean-styles', function () {
 });
 
 gulp.task('copy-src', function () {
-    return gulp.src('src/**')
+    return gulp.src(['src/**', '!src/screenshot-git.png'])
         .pipe(gulp.dest('dist/'));
 });
 

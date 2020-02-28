@@ -1,6 +1,6 @@
 # Araneo Wordpress Theme
 
-Wordpress theme for my personal website.
+Wordpress theme for my personal website. Project is under MIT licence.
 
 
 ## Project Installation
@@ -20,3 +20,9 @@ gulp build
 ```
 
 After building procedure the ready-to-use theme is located in _dist_ directory.
+
+## TODO
+
+1) Gulp sass
+2) Screenshot
+3) More development if needed
