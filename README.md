@@ -1,5 +1,7 @@
 # Araneo Wordpress Theme
 
+![Logo](src/screenshot-git.png)
+
 Wordpress theme for my personal website. Project is under MIT licence.
 
 
