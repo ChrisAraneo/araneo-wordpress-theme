@@ -21,8 +21,7 @@ gulp build
 
 After building procedure the ready-to-use theme is located in _dist_ directory.
 
-## TODO
+## Todo in future
 
 1) Gulp sass
-2) Screenshot
-3) More development if needed
+2) More development if needed
