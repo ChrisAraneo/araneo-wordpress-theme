@@ -20,7 +20,7 @@ $tag-hover-color: rgba(255, 255, 255, 1);
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
 
 /* IMPORTING BOOTSTRAP */
-@import "../vendor/twbs/bootstrap/scss/bootstrap.scss";
+@import "../../vendor/twbs/bootstrap/scss/bootstrap.scss";
 
 body {
     font-family: "Titillium Web";
@@ -43,7 +43,6 @@ body {
 /* START */
 @media (max-height: 600px) {
     .section-start {
-        padding-top: 4.5rem;
         position: absolute;
         top: 0;
         left: 0;
@@ -63,7 +62,7 @@ body {
     }
     .section-start-inner {
         width: 100%;
-        min-height: 100vh;
+        min-height: calc(100vh - 4.5rem);
         display: flex;
         flex-direction: column;
         justify-content: center;

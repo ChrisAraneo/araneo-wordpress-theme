@@ -8,9 +8,9 @@
                 <h4 id="start-subtitle" class="text-center font-weight-bold">
                     <span class="text-white typewriter" data-delay="21">Poszukuję stażu na stanowisku</span> <span class="text-secondary typewriter" data-delay="50">programisty</span>
                 </h4>
-                <div class="mt-5" style="perspective: 50px; display: flex; flex-direction: row; justify-content: center;" data-aos="zoom-in" data-aos-delay="300">
-                    <div id="spider">
-                        <pre class="mb-0" style="display: inline-block; color: white; text-align: center; font-size: 1.8rem; line-height: 2rem; font-weight: bold; position: relative; transition-duration: 0.1s; user-select: none;">//  \\<br>_\\()//_<br>/ //  \\ \<br>| \__/ |<br></pre>
+                <div class="mt-5" style="perspective: 50px; display: flex; flex-direction: row; justify-content: center; overflow: visible;" data-aos="zoom-in" data-aos-delay="300">
+                    <div id="spider" style="overflow: visible;">
+                        <pre class="mb-0" style="display: inline-block; color: white; text-align: center; font-size: 1.8rem; line-height: 2rem; font-weight: bold; position: relative; transition-duration: 0.1s; user-select: none; overflow: visible;">//  \\<br>_\\()//_<br>/ //  \\ \<br>| \__/ |</pre>
                     </div>
                 </div>
             </header>

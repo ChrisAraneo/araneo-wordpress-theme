@@ -1,6 +1,9 @@
 const gulp = require('gulp');
 const del = require('del');
 const zip = require('gulp-zip');
+const sass = require('gulp-sass');
+sass.compiler = require('node-sass');
+const cleancss = require('gulp-clean-css');
 
 const themeName = "araneo-theme";
 
@@ -8,6 +11,18 @@ const themeName = "araneo-theme";
 
 gulp.task('clean', function () {
     return del(['dist/*']);
+});
+
+gulp.task('sass', function () {
+    return gulp.src('src/styles/**.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('src/styles/'));
+});
+
+gulp.task('minify-css', function () {
+    return gulp.src('src/styles/**.css')
+        .pipe(cleancss({ compatibility: 'ie8' }))
+        .pipe(gulp.dest('src/styles/'));
 });
 
 gulp.task('clean-!zip', function () {
@@ -46,4 +61,4 @@ gulp.task('success', function () {
 
 // =====
 
-gulp.task('build', gulp.series('clean', gulp.parallel('copy-src', 'copy-bootstrap', 'copy-navwalker'), 'clean-styles', 'archive', 'clean-!zip'));
+gulp.task('build', gulp.series('clean', 'sass', 'minify-css', gulp.parallel('copy-src', 'copy-bootstrap', 'copy-navwalker'), 'clean-styles', 'archive', 'clean-!zip'));

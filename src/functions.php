@@ -16,28 +16,28 @@
         wp_enqueue_script('jquery');
 
         /* TAGS */
-        wp_register_script('tags', get_template_directory_uri() . '/scripts/tags.js', array(), false, true);
+        wp_register_script('tags', get_template_directory_uri() . '/scripts/tags.js', array(), false, false);
         wp_enqueue_script('tags');
 
         /* TYPEWRITER */
-        wp_register_script('typewriter', get_template_directory_uri() . '/scripts/typewriter.js', array(), false, true);
+        wp_register_script('typewriter', get_template_directory_uri() . '/scripts/typewriter.js', array(), false, false);
         wp_enqueue_script('typewriter');
 
         /* ANIMATED SPIDER */
-        wp_register_script('spider', get_template_directory_uri() . '/scripts/spider.js', array(), false, true);
+        wp_register_script('spider', get_template_directory_uri() . '/scripts/spider.js', array(), false, false);
         wp_enqueue_script('spider');     
         
-        /* BACKGROUND */
-        wp_register_script('background', get_template_directory_uri() . '/scripts/background.js', array(), false, true);
-        wp_enqueue_script('background');
+        /* LAZY IMAGE LOADING */
+        wp_register_script('lazyimages', get_template_directory_uri() . '/scripts/lazy-images.js', array(), false, false);
+        wp_enqueue_script('lazyimages');
         $data = array( 'path' => get_template_directory_uri() );
-        wp_localize_script( 'background', 'data', $data );
+        wp_localize_script( 'lazyimages', 'data', $data );
 
         /* SCROLL SCRIPT */
-        wp_register_script('scroll', get_template_directory_uri() . '/scripts/scroll-script.js', array(), false, true);
+        wp_register_script('scroll', get_template_directory_uri() . '/scripts/scroll-script.js', array(), false, false);
         wp_enqueue_script('scroll');
         
-        wp_register_script('bootstrapjs', get_template_directory_uri() . '/libs/bootstrap.min.js', 'jquery', false, true);
+        wp_register_script('bootstrapjs', get_template_directory_uri() . '/libs/bootstrap.min.js', 'jquery', false, false);
         wp_enqueue_script('bootstrapjs');
 
         /* BOOTSTRAP JS */
@@ -49,7 +49,7 @@
         } else {
             return new WP_Error( 'bootstrap-min-missing', __( 'It appears the bootstrap.min.js file may be missing.', 'bootstrap-min-missing' ) );
         }
-        wp_register_script('bootstrapjs', $bootstrapjs_path, 'jquery', false, true);
+        wp_register_script('bootstrapjs', $bootstrapjs_path, 'jquery', false, false);
         wp_enqueue_script('bootstrapjs');   
     }
     add_action('wp_enqueue_scripts', 'load_js');
