@@ -23,10 +23,10 @@ Template Name: About Me (static) (pl)
 
     <h2>Wykształcenie</h2>
 
-    <p class="opacity-08 mb-0">2019 – obecnie</p>
+    <p class="text-muted mb-0">2019 – obecnie</p>
     <p>Studia podyplomowe Technologie Internetowe, Politechnika Wrocławska</p>
 
-    <p class="opacity-08 mb-0">2015 – 2019</p>
+    <p class="text-muted mb-0">2015 – 2019</p>
     <p class="mb-5">Studia inżynierskie, kierunek Informatyka na wydziale Podstawowych Problemów Techniki, Politechnika Wrocławska</p>
 </div>
 

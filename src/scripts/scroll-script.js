@@ -6,7 +6,7 @@ function isInViewport(element) {
     return (
         rect.top >= 0 &&
         rect.left >= 0 &&
-        rect.bottom - (rect.bottom - rect.top) / 2.0 <= viewHeight &&
+        rect.bottom - (rect.bottom - rect.top) / 1.2 <= viewHeight &&
         rect.right <= viewWidth
     );
 }

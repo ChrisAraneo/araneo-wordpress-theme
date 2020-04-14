@@ -37,8 +37,10 @@ function loadBackground(src, className) {
         if (!item) {
             fetchImageBase64(src, (base64) => {
                 window.IMAGES_LOADED++;
-                localStorage.setItem(src, base64);
-                setBackground(base64, className);
+                // Need to edit base64 string
+                const base64svg = base64.replace("data:text/html;", "data:image/svg+xml;");
+                localStorage.setItem(src, base64svg);
+                setBackground(base64svg, className);
                 updateLoading();
             });
         } else {
@@ -50,7 +52,7 @@ function loadBackground(src, className) {
     // If local storage is not supported
     // image will fetch every time
     else {
-        fetchImageBase64(src, (base64) => {
+        fetchImageBase64(src, () => {
             setBackground(item, className);
         });
     }
@@ -98,10 +100,10 @@ document.onreadystatechange = function (e) {
         window.IMAGES_LOADED = 0;
         window.IMAGES_MAX = 4;
 
-        loadBackground(`${path}/images/background-lines-1.png`, 'background-lines-1');
-        loadBackground(`${path}/images/background-lines-2.png`, 'background-lines-2');
-        loadBackground(`${path}/images/background-lines-3.png`, 'background-lines-3');
-        loadBackground(`${path}/images/background-lines-full.png`, 'background-lines-full');
+        loadBackground(`${path}/images/background-lines-1.svg`, 'background-lines-1');
+        loadBackground(`${path}/images/background-lines-2.svg`, 'background-lines-2');
+        loadBackground(`${path}/images/background-lines-3.svg`, 'background-lines-3');
+        loadBackground(`${path}/images/background-lines-full.svg`, 'background-lines-full');
         updateLoading();
     }
 };
