@@ -62,33 +62,34 @@ function updateLoading() {
     const string = `Ładowanie... ${window.IMAGES_LOADED} / ${window.IMAGES_MAX}`;
     console.log(string);
 
-    if (window.IMAGES_LOADED < window.IMAGES_MAX || window.IMAGES_LOADED == 0) {
-        const layer = document.getElementById("layer-loading");
-        if (layer.children.length < 1) {
-            const p = document.createElement("p");
-            p.style.color = "rgba(255,255,255,0.6)";
-            p.style.textAlign = "center";
-            layer.appendChild(p);
-            p.innerHTML = string;
-        } else {
-            if (layer.children[0]) {
-                const p = layer.children[0];
-                p.innerHTML = string;
-            }
-        }
-    } else {
-        const pages = document.getElementsByClassName("page");
-        for (let i = 0; i < pages.length; ++i) {
-            const page = pages[i];
-            if (!page.classList.contains("animation-opacity")) {
-                page.classList.add("animation-opacity");
-            }
-        }
-        const layer = document.getElementById("layer-loading");
-        if (layer) {
-            layer.remove();
-        }
-    }
+    // // BLACK LAYER ON PAGE... RIGHT NOW IT IS DISABLED
+    // if (window.IMAGES_LOADED < window.IMAGES_MAX || window.IMAGES_LOADED == 0) {
+    //     const layer = document.getElementById("layer-loading");
+    //     if (layer.children.length < 1) {
+    //         const p = document.createElement("p");
+    //         p.style.color = "rgba(255,255,255,0.6)";
+    //         p.style.textAlign = "center";
+    //         layer.appendChild(p);
+    //         p.innerHTML = string;
+    //     } else {
+    //         if (layer.children[0]) {
+    //             const p = layer.children[0];
+    //             p.innerHTML = string;
+    //         }
+    //     }
+    // } else {
+    //     const pages = document.getElementsByClassName("page");
+    //     for (let i = 0; i < pages.length; ++i) {
+    //         const page = pages[i];
+    //         if (!page.classList.contains("animation-opacity")) {
+    //             page.classList.add("animation-opacity");
+    //         }
+    //     }
+    //     const layer = document.getElementById("layer-loading");
+    //     if (layer) {
+    //         layer.remove();
+    //     }
+    // }
 }
 
 
