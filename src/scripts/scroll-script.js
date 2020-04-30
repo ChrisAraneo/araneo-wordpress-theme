@@ -6,7 +6,7 @@ function isInViewport(element) {
     return (
         rect.top >= 0 &&
         rect.left >= 0 &&
-        rect.bottom - (rect.bottom - rect.top) / 1.2 <= viewHeight &&
+        rect.bottom - 32 <= viewHeight &&
         rect.right <= viewWidth
     );
 }
@@ -14,7 +14,7 @@ function isInViewport(element) {
 function initScrollAnimation() {
     const className = "scroll-script";
     const delay = 0.1;
-    const duration = 0.5;
+    const duration = 0.75;
 
     const elements = document.querySelectorAll("h1, h2, h3, p");
     if (elements) {

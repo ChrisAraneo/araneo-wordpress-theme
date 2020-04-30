@@ -5,7 +5,8 @@
 
 /* THEME */
 $primary: hsl(185, 100%, 60%);
-$secondary: hsl(160, 100%, 60%);
+$secondary: #33ffbb;
+$gray: #71808f;
 
 $body-bg: #000e0f;
 $dark: $body-bg;
@@ -34,7 +35,7 @@ body {
 
 /* GRADIENT BACKGROUND */
 .background-gradient {
-    background: linear-gradient(-13deg, darken($primary, 28%), darken($primary, 50%), $body-bg, $body-bg);
+    background: linear-gradient(-10deg, darken($primary, 20%), darken($primary, 40%), $body-bg, $body-bg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -91,13 +92,16 @@ body {
 }
 
 .component-post:not(:last-of-type) {
+    box-sizing: border-box;
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+    border-bottom: 2px dashed $gray;
 }
 
 /* COMPONENT FOOTER */
 .component-footer {
+    font-size: 1.15rem;
+
     a {
         text-decoration: underline;
         color: rgba(255, 255, 255, 0.75);
@@ -135,6 +139,14 @@ body {
     color: rgba(255, 255, 255, 0.75);
 }
 
+/* MARGIN ON PHOTOS AND VIDEOS */
+.wp-block-image,
+.wp-block-video {
+    box-sizing: border-box;
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
 /* HEADERS SECONDARY COLORS */
 h1,
 h2,
@@ -144,12 +156,28 @@ h4 {
 }
 /* TITLE */
 .component-title {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding: 7rem 3rem;
 }
 .component-title-outer {
-    border-radius: 1rem;
+    border-radius: 0;
 }
+
+/* SEPARATOR */
+.separator {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 3rem;
+    height: 3px;
+    background: linear-gradient(to right, transparent 50%, $body-bg 50%),
+        linear-gradient(to right, darken($secondary, 30%), darken($primary, 40%));
+    background-size: 16px 2px, 100% 2px;
+}
+
+/*
+rgba(118, 255, 145, 1) 0%,
+        rgba(174, 205, 254, 1) 49%,
+        rgba(153, 245, 214, 1) 100%
+*/
 
 /* FLOAT LEFT HEADERS */
 @media (max-width: 768px) {
@@ -220,15 +248,17 @@ h4 {
 a[href*="tag"] {
     color: $tag-color;
     box-sizing: border-box;
-    border: 1px solid $tag-color;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    border-radius: 0.33em;
-    font-size: 1.05rem;
+    border-bottom: 1px dashed $tag-color;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    border-radius: 0;
+    text-decoration: none;
+    font-size: 1.2rem;
 }
 a[href*="tag"]:hover {
     color: $tag-hover-color;
-    border: 1px solid $tag-hover-color;
+    border-bottom: 1px solid $tag-hover-color;
+    text-decoration: none;
 }
 a[href*="tag"]:not(:last-of-type) {
     margin-right: 0.1em;
@@ -236,7 +266,22 @@ a[href*="tag"]:not(:last-of-type) {
 
 /* CUSTOM SCROLL BAR */
 body::-webkit-scrollbar {
-    width: 0.9rem;
+    width: 12px;
+}
+
+/* FIGCAPTION */
+figcaption {
+    font-size: 1.15rem;
+    color: $gray;
+    text-align: center;
+}
+figcaption::before {
+    content: "\21E7";
+    color: $gray;
+    display: inline-block;
+    margin-right: 1.15rem;
+    font: normal 1.15rem helvetica;
+    font-size: 1.15rem;
 }
 
 /* Track */

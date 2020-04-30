@@ -61,54 +61,15 @@ function loadBackground(src, className) {
 function updateLoading() {
     const string = `Ładowanie... ${window.IMAGES_LOADED} / ${window.IMAGES_MAX}`;
     console.log(string);
-
-    // // BLACK LAYER ON PAGE... RIGHT NOW IT IS DISABLED
-    // if (window.IMAGES_LOADED < window.IMAGES_MAX || window.IMAGES_LOADED == 0) {
-    //     const layer = document.getElementById("layer-loading");
-    //     if (layer.children.length < 1) {
-    //         const p = document.createElement("p");
-    //         p.style.color = "rgba(255,255,255,0.6)";
-    //         p.style.textAlign = "center";
-    //         layer.appendChild(p);
-    //         p.innerHTML = string;
-    //     } else {
-    //         if (layer.children[0]) {
-    //             const p = layer.children[0];
-    //             p.innerHTML = string;
-    //         }
-    //     }
-    // } else {
-    //     const pages = document.getElementsByClassName("page");
-    //     for (let i = 0; i < pages.length; ++i) {
-    //         const page = pages[i];
-    //         if (!page.classList.contains("animation-opacity")) {
-    //             page.classList.add("animation-opacity");
-    //         }
-    //     }
-    //     const layer = document.getElementById("layer-loading");
-    //     if (layer) {
-    //         layer.remove();
-    //     }
-    // }
 }
 
-
-document.onreadystatechange = function (e) {
-    if (document.readyState === 'complete') {
-        // Data object is passed from functions.php
-        const { path } = data;
-
-        window.IMAGES_LOADED = 0;
-        window.IMAGES_MAX = 4;
-
-        loadBackground(`${path}/images/background-lines-1.svg`, 'background-lines-1');
-        loadBackground(`${path}/images/background-lines-2.svg`, 'background-lines-2');
-        loadBackground(`${path}/images/background-lines-3.svg`, 'background-lines-3');
-        loadBackground(`${path}/images/background-lines-full.svg`, 'background-lines-full');
-        updateLoading();
-    }
-};
-
-
-
-
+document.addEventListener('DOMContentLoaded', function () {
+    const { path } = data;
+    window.IMAGES_LOADED = 0;
+    window.IMAGES_MAX = 4;
+    loadBackground(`${path}/images/background-lines-1.svg`, 'background-lines-1');
+    loadBackground(`${path}/images/background-lines-2.svg`, 'background-lines-2');
+    loadBackground(`${path}/images/background-lines-3.svg`, 'background-lines-3');
+    loadBackground(`${path}/images/background-lines-full.svg`, 'background-lines-full');
+    updateLoading();
+}, false);
