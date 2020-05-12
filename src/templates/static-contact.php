@@ -5,9 +5,8 @@ Template Name: Contact (static) (pl)
 ?>
 
 <?php get_header(); ?>
-
+<?php get_template_part('includes/component', 'title'); ?>
 <div class="container page animation-opacity">
-    <?php get_template_part('includes/component', 'title'); ?>
     <div class="d-flex flex-row justify-content-center">
         <div class="d-inline-block mr-4">
             <p class="text-right">E-mail:</p>

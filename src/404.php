@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="container page">
-    <header class="mb-5 mt-5 background-lines-3-outer">
+    <header class="background-lines-3-outer">
         <div class="component-title background-lines-3">
             <h1 class="display-5 text-center font-weight-bold">
                 <span class="text-white">404</span>

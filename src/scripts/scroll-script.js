@@ -40,8 +40,28 @@ function initScrollAnimation() {
                 }
             }
         }
+
+        const navbar = document.getElementsByClassName("navbar");
+        // const viewWidth = (window.innerWidth || document.documentElement.clientWidth);
+        if (navbar) {
+            for (let i = 0; i < navbar.length; ++i) {
+                const element = navbar[i];
+                const y = window.scrollY;
+                console.log(y);
+                if (y >= 1) {
+                    if (!element.classList.contains("navbar-border-bottom")) {
+                        element.classList.add("navbar-border-bottom");
+                    }
+                } else if (element.classList.contains("navbar-border-bottom")) {
+                    element.classList.remove("navbar-border-bottom");
+                }
+            }
+        }
+
     });
+
 }
+
 
 
 // document.addEventListener('load', (event) => scrollAnimationListener(elementsToUpdate, event));

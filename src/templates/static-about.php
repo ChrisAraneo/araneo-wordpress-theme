@@ -5,10 +5,8 @@ Template Name: About Me (static) (pl)
 ?>
 
 <?php get_header(); ?>
-
+<?php get_template_part('includes/component', 'title'); ?>
 <div class="container page animation-opacity">
-    <?php get_template_part('includes/component', 'title'); ?>
-
     <h2 class="left">Kilka słów o mnie</h2>
 
     <p class="mb-5">Nazywam się Krzysztof Pająk. Interesuję się technologiami webowymi i aplikacjami mobilnymi. Moją karierę programistyczną chciałbym w przyszłości związać z tworzeniem aplikacji webowych lub aplikacji mobilnych. Od kilku lat, w ramach studiów jak i w wolnym czasie, kształcę się w tych obszarach programowania. Jestem absolwentem inżynierskich studiów informatycznych na Politechnice Wrocławskiej. Do moich zainteresowań i hobby zawsze należało programowanie, muzyka elektroniczna, sporty wodne, podróże.</p>
