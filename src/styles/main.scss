@@ -17,7 +17,7 @@ $font-size-base: 1.3rem;
 $tag-color: rgba(255, 255, 255, 0.8);
 $tag-hover-color: rgba(255, 255, 255, 1);
 
-$page-border: 1px solid darken($primary, 42%);
+$page-border: 1px solid darken($primary, 37%);
 
 $width-limit: 875px;
 
@@ -132,7 +132,7 @@ body {
     margin-top: 4.5rem;
 }
 .page {
-    background-color: lighten($body-bg, 1.6%);
+    background-color: lighten($body-bg, 1.5%);
     border: $page-border;
     border-radius: 0.33rem;
     padding: 32px;
