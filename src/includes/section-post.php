@@ -5,7 +5,7 @@
 </article>
 
 <footer class="mt-5">
-<div class="row mt-5 mb-5">
+<div class="row mt-5">
     <div class="col-md-8">
         <?php
             $tags = get_the_tags();

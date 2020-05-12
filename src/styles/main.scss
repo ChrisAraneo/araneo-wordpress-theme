@@ -17,7 +17,9 @@ $font-size-base: 1.3rem;
 $tag-color: rgba(255, 255, 255, 0.8);
 $tag-hover-color: rgba(255, 255, 255, 1);
 
-$page-border: 1px solid darken($secondary, 39%);
+$page-border: 1px solid darken($primary, 42%);
+
+$width-limit: 875px;
 
 /* IMPORTING FONT */
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
@@ -39,7 +41,7 @@ body {
 }
 .front-page {
     .background-gradient {
-        background: linear-gradient(-13deg, darken($secondary, 37%), darken($primary, 48%), $body-bg, $body-bg);
+        background: linear-gradient(-13deg, darken($primary, 37%), darken($primary, 48%), $body-bg, $body-bg);
         background-size: 100% 100%;
         background-repeat: no-repeat;
         background-position: left bottom;
@@ -48,7 +50,7 @@ body {
 
 /* CONTAINER WIDTH LIMIT */
 .container {
-    max-width: 850px;
+    max-width: $width-limit;
 }
 
 /* START */
@@ -97,17 +99,44 @@ body {
 }
 
 /* FRONT PAGE & PAGE */
+.background-page {
+    width: 100%;
+    max-width: 100%;
+}
+.background-page::before,
+.background-page::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+    background-color: transparent;
+}
+.background-page::before {
+    left: 0;
+    background-image: linear-gradient($body-bg, transparent);
+    z-index: 0;
+}
+.background-page::after {
+    left: 0;
+    margin-top: -300px;
+    background-image: linear-gradient(transparent $body-bg);
+    z-index: 0;
+}
 .front-page,
 .page {
-    margin-top: 3rem;
     min-height: calc(100vh - 11rem);
     padding: 0;
 }
+.front-page {
+    margin-top: 4.5rem;
+}
 .page {
-    background-color: lighten($body-bg, 1.5%);
+    background-color: lighten($body-bg, 1.6%);
     border: $page-border;
     border-radius: 0.33rem;
     padding: 32px;
+    position: relative;
 }
 @media (max-width: 600px) {
     .page {
@@ -186,7 +215,8 @@ h4 {
 .component-title {
     box-sizing: border-box;
     padding: 3rem;
-    min-height: 22rem;
+    min-height: 27rem;
+    max-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

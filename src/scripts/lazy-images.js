@@ -12,12 +12,17 @@ function fetchImageBase64(src, callback) {
     xhr.send();
 }
 
-function setBackground(base64, className) {
+function setBackground(base64, className, options = "") {
     const elements = document.getElementsByClassName(className);
     if (elements) {
         for (let i = 0; i < elements.length; ++i) {
             const element = elements[i];
-            element.setAttribute("style", `background-image: url("${base64}");background-repeat: no-repeat;background-size: 100% 100%;background-position: left bottom;`);
+            if (options.length < 1) {
+                element.setAttribute("style", `background-image: url("${base64}");background-repeat: no-repeat;background-size: 100% 100%;background-position: left bottom;`);
+            } else {
+                element.setAttribute("style", `background-image: url("${base64}");${options}`);
+            }
+
         }
     }
     const befores = document.getElementsByClassName(`${className}-outer`);
@@ -29,7 +34,7 @@ function setBackground(base64, className) {
     }
 }
 
-function loadBackground(src, className) {
+function loadBackground(src, className, options = "") {
     // If local storage is supported
     // we will fetch image and save it in storage
     if (typeof (Storage) !== "undefined") {
@@ -45,7 +50,7 @@ function loadBackground(src, className) {
             });
         } else {
             window.IMAGES_LOADED++;
-            setBackground(item, className);
+            setBackground(item, className, options);
             updateLoading();
         }
     }
@@ -67,9 +72,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const { path } = data;
     window.IMAGES_LOADED = 0;
     window.IMAGES_MAX = 4;
+
+    loadBackground(`${path}/images/background-lines-full.svg`, 'background-lines-full');
+    updateLoading();
     loadBackground(`${path}/images/background-lines-1.svg`, 'background-lines-1');
     loadBackground(`${path}/images/background-lines-2.svg`, 'background-lines-2');
     loadBackground(`${path}/images/background-lines-3.svg`, 'background-lines-3');
-    loadBackground(`${path}/images/background-lines-full.svg`, 'background-lines-full');
-    updateLoading();
+    loadBackground(`${path}/images/background-page.svg`, 'background-page', 'background-repeat: repeat-y;background-position: left top;');
 }, false);
