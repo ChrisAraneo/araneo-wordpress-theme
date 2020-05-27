@@ -18,7 +18,7 @@
         <?php endif;?>
         <?php endwhile; else: endif; ?>
     </div>
-    <div class="col-md-4">
+    <div class="footer-post col-md-4">
         <p class="text-right">
             <span class="mr-3"><?php the_author_posts_link(); ?></span>
             <span class="text-muted"><?php echo get_the_date('d/m/Y'); ?></span>

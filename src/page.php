@@ -6,7 +6,6 @@
     <div class="container page">    
         <?php get_template_part('includes/section', 'content'); ?>
     </div>
-    
     <?php get_template_part('includes/component', 'footer'); ?>
 </div>
 

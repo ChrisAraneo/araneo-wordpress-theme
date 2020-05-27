@@ -34,14 +34,14 @@ body {
 
 /* GRADIENT BACKGROUND */
 .background-gradient {
-    background: linear-gradient(175deg, darken($primary, 33%), darken($primary, 49%), $body-bg, $body-bg);
+    background: linear-gradient(174deg, darken($primary, 38%), darken($primary, 52%), $body-bg, $body-bg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: left bottom;
 }
 .front-page {
     .background-gradient {
-        background: linear-gradient(-13deg, darken($primary, 37%), darken($primary, 48%), $body-bg, $body-bg);
+        background: linear-gradient(-13deg, darken($primary, 39%), darken($primary, 53%), $body-bg, $body-bg);
         background-size: 100% 100%;
         background-repeat: no-repeat;
         background-position: left bottom;
@@ -103,24 +103,17 @@ body {
     width: 100%;
     max-width: 100%;
 }
-.background-page::before,
-.background-page::after {
+.background-page::before {
     content: "";
     position: absolute;
     width: 100%;
     max-width: 100%;
-    height: 300px;
+    height: 500px;
     background-color: transparent;
 }
 .background-page::before {
     left: 0;
-    background-image: linear-gradient($body-bg, transparent);
-    z-index: 0;
-}
-.background-page::after {
-    left: 0;
-    margin-top: -300px;
-    background-image: linear-gradient(transparent $body-bg);
+    background-image: linear-gradient(174deg, $body-bg, darken($primary, 52%), $body-bg, transparent);
     z-index: 0;
 }
 .front-page,
@@ -215,7 +208,7 @@ h4 {
 .component-title {
     box-sizing: border-box;
     padding: 3rem;
-    min-height: 27rem;
+    height: 450px;
     max-height: 80vh;
     display: flex;
     flex-direction: column;
@@ -239,7 +232,6 @@ h4 {
     content: "";
     width: 100%;
     height: 32px;
-    background-color: red;
 }
 
 /* SEPARATOR */

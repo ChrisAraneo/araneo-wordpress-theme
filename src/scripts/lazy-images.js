@@ -78,5 +78,5 @@ document.addEventListener('DOMContentLoaded', function () {
     loadBackground(`${path}/images/background-lines-1.svg`, 'background-lines-1');
     loadBackground(`${path}/images/background-lines-2.svg`, 'background-lines-2');
     loadBackground(`${path}/images/background-lines-3.svg`, 'background-lines-3');
-    loadBackground(`${path}/images/background-page.svg`, 'background-page', 'background-repeat: repeat-y;background-position: left top;');
+    loadBackground(`${path}/images/background-page.svg`, 'background-page', 'background-repeat: repeat-y;background-size:100%;background-position:left top;');
 }, false);

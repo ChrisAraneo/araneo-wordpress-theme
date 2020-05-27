@@ -6,20 +6,22 @@ Template Name: Contact (static) (pl)
 
 <?php get_header(); ?>
 <?php get_template_part('includes/component', 'title'); ?>
-<div class="container page animation-opacity">
-    <div class="d-flex flex-row justify-content-center">
-        <div class="d-inline-block mr-4">
-            <p class="text-right">E-mail:</p>
-            <p class="text-right">Git:</p>
-        </div>
-        <div class="d-inline-block">
-            <p><a href="<?php echo base64_encode("mailto:chris.araneo@gmail.com"); ?>" data-encoded target="_blank"><?php echo base64_encode("chris.araneo@gmail.com"); ?></a></p>
-            <p><a href="<?php echo base64_encode("https://github.com/chrisaraneo"); ?>" data-encoded target="_blank"><?php echo base64_encode("github.com/ChrisAraneo"); ?></a></p>
+<div class="background-page">
+    <div class="container page animation-opacity">
+        <div class="d-flex flex-row justify-content-center">
+            <div class="d-inline-block mr-4">
+                <p class="text-right">E-mail:</p>
+                <p class="text-right">Git:</p>
+            </div>
+            <div class="d-inline-block">
+                <p><a href="<?php echo base64_encode("mailto:chris.araneo@gmail.com"); ?>" data-encoded target="_blank"><?php echo base64_encode("chris.araneo@gmail.com"); ?></a></p>
+                <p><a href="<?php echo base64_encode("https://github.com/chrisaraneo"); ?>" data-encoded target="_blank"><?php echo base64_encode("github.com/ChrisAraneo"); ?></a></p>
+            </div>
         </div>
     </div>
-</div>
 
-<?php get_template_part('includes/component', 'footer'); ?>
+    <?php get_template_part('includes/component', 'footer'); ?>
+</div>
 
 <script>
     function decode() {
